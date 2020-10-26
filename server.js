@@ -1,3 +1,10 @@
+/*
+File name: server.js
+Author's name: Aakriti Gupta
+Student ID: 301103413
+Date: October 26, 2020
+Web site name: Favourite BookList Midterm
+*/
 let app = require('./server/config/app');
 let debug = require('debug')('comp229-f2020-midterm:server');
 let http = require('http');

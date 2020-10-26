@@ -1,4 +1,11 @@
-// moddules for node and express
+/*
+File name: app.js
+Author's name: Aakriti Gupta
+Student ID: 301103413
+Date: October 26, 2020
+Web site name: Favourite BookList Midterm
+*/
+// modules for node and express
 let createError = require('http-errors');
 let express = require('express');
 let path = require('path');

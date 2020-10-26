@@ -1,3 +1,10 @@
+/*
+File name: books.js
+Author's name: Aakriti Gupta
+Student ID: 301103413
+Date: October 26, 2020
+Web site name: Favourite BookList Midterm
+*/
 // modules required for routing
 let express = require('express');
 let router = express.Router();
@@ -33,7 +40,7 @@ router.get('/details/add', (req, res, next) => {
 });
 
 // POST process the Book Details page and create a new Book - CREATE
-router.post('/add', (req, res, next) => 
+router.post('/details/add', (req, res, next) => 
 {
       let newBook = book(
     {
@@ -60,7 +67,7 @@ router.post('/add', (req, res, next) =>
 });
 
 // GET the Book Details page in order to edit an existing Book
-router.get('/edit/:id', (req, res, next) => {
+router.get('/details/edit/:id', (req, res, next) => {
   let id = req.params.id
 
   book.findById(id, (err, editBook) =>
@@ -79,7 +86,7 @@ router.get('/edit/:id', (req, res, next) => {
 });
 
 // POST - process the information passed from the details form and update the document
-router.post('/edit/:id', (req, res, next) => {
+router.post('/details/edit/:id', (req, res, next) => {
 
   let id = req.params.id
 
@@ -110,7 +117,7 @@ router.post('/edit/:id', (req, res, next) => {
 router.get('/delete/:id', (req, res, next) => {
   let id = req.params.id;
 
-    Book.remove({_id: id}, (err) => {
+    book.remove({_id: id}, (err) => {
         if(err)
         {
             console.log(err);
